@@ -19,5 +19,22 @@ namespace PersonnelApi.Controllers
                 return await ctx.Personnel.ToListAsync();
             }
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Person>> Get(int id){
+            using(var ctx = new KDTestContext()){
+                return await ctx.Personnel.FirstAsync(m => m.PersonID == id);
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Person>> Post(Person person){
+            using(var ctx = new KDTestContext()){
+                ctx.Personnel.Add(person);
+                await ctx.SaveChangesAsync();
+
+                return CreatedAtAction(nameof(Person), new { id = person.PersonID }, person);
+            }
+        }
     }
 }
