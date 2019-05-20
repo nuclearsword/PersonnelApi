@@ -1,0 +1,14 @@
+C:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\bin\Debug\netcoreapp2.1\PersonnelApi.deps.json
+C:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\bin\Debug\netcoreapp2.1\PersonnelApi.runtimeconfig.json
+C:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\bin\Debug\netcoreapp2.1\PersonnelApi.runtimeconfig.dev.json
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\bin\Debug\netcoreapp2.1\PersonnelApi.dll
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\bin\Debug\netcoreapp2.1\PersonnelApi.pdb
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.csprojAssemblyReference.cache
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.csproj.CoreCompileInputs.cache
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.RazorAssemblyInfo.cache
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.RazorAssemblyInfo.cs
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.AssemblyInfoInputs.cache
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.AssemblyInfo.cs
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.RazorTargetAssemblyInfo.cache
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.dll
+c:\Users\kyle.dunbar\source\repos\PersonnelProject\PersonnelApi\obj\Debug\netcoreapp2.1\PersonnelApi.pdb
