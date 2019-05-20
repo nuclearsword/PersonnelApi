@@ -16,6 +16,7 @@ namespace PersonnelApi
 {
     public class Startup
     {
+        protected readonly string ALLOWED_CORS_ORIGIN = "https://localhost:8080";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -30,6 +31,11 @@ namespace PersonnelApi
 
             //Register the db context so it can be used in the controllers.
             services.AddDbContext<KDTestContext>();
+
+            //enable CORS
+            services.AddCors(c => {
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins(ALLOWED_CORS_ORIGIN));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +52,9 @@ namespace PersonnelApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            
+            //Enable CORS
+            app.UseCors(options => options.WithOrigins(ALLOWED_CORS_ORIGIN));
         }
     }
 }

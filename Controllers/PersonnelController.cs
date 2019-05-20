@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using PersonnelApi.Models;
 using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 namespace PersonnelApi.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("AllowOrigin")]
     [ApiController]
     public class PersonnelController : ControllerBase
     {
