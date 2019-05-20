@@ -23,7 +23,7 @@ namespace PersonnelApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Person>> Get(int id){
             using(var ctx = new KDTestContext()){
-                return await ctx.Personnel.FirstAsync(m => m.PersonID == id);
+                return await ctx.Personnel.FindAsync(id);
             }
         }
 
@@ -35,6 +35,38 @@ namespace PersonnelApi.Controllers
 
                 return CreatedAtAction(nameof(Person), new { id = person.PersonID }, person);
             }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Person>> Put(int id, Person person){
+            if(id != person.PersonID){
+                return BadRequest();
+            }
+
+            using(var ctx = new KDTestContext()){
+                ctx.Entry(person).State = EntityState.Modified;
+                await ctx.SaveChangesAsync();
+            }
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Person>> DeletePerson(int id){
+            using(var ctx = new KDTestContext()){
+                var person = await ctx.Personnel.FindAsync(id);
+
+                if(person is null){
+                    return NotFound();
+                }
+
+                person.Deleted = DateTime.Now;
+                ctx.Entry(person).State = EntityState.Modified;
+
+                await ctx.SaveChangesAsync();
+            }
+            
+            return NoContent();
         }
     }
 }
